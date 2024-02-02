@@ -5,5 +5,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_train"
-    tools:context=".MainActivity" />
+    android:background="@drawable/background_marble"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/TV_cocktails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="cursive"
+        android:text="@string/app_name"
+        android:textColor="@color/rosa"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        android:letterSpacing="0.08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CV_bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/BNV_bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            app:itemIconTint="@color/rosa"
+            app:itemTextColor="@color/rosa"
+            app:menu="@menu/bottom_nav_menu" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/CV_bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_cocktails"
+        app:navGraph="@navigation/nav_graph"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

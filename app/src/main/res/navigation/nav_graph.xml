@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.cocktails.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment2"
+        android:name="com.example.cocktails.ui.fragment.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment2_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.cocktails.ui.fragment.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/profilFragment2"
+        android:name="com.example.cocktails.ui.fragment.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.cocktails.ui.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

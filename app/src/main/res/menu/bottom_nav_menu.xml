@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/icon_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/favoriteFragment"
+        android:icon="@drawable/icon_favorite"
+        android:title="@string/favorites" />
+
+    <item
+        android:id="@+id/addFragment"
+        android:icon="@drawable/icon_add"
+        android:title="@string/add" />
+
+    <item
+        android:id="@+id/profilFragment"
+        android:icon="@drawable/icon_profil"
+        android:title="@string/profil" />
+
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/icon_settings"
+        android:title="@string/settings" />
+
 </menu>
