@@ -27,6 +27,7 @@
         android:id="@+id/CV_bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
         app:cardBackgroundColor="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,9 +37,11 @@
             android:id="@+id/BNV_bottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#00FFFFFF"
-            app:itemIconTint="@color/rosa"
-            app:itemTextColor="@color/rosa"
+            android:background="#40FF10F0"
+            app:itemIconSize="30dp"
+            app:itemIconTint="@color/tiffany_blue"
+            app:itemRippleColor="#80723298"
+            app:itemTextColor="@color/tiffany_blue"
             app:menu="@menu/bottom_nav_menu" />
     </androidx.cardview.widget.CardView>
 

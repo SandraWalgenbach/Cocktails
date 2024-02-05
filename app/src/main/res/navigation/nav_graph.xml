@@ -10,18 +10,14 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment2_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            android:id="@+id/action_homeFragment2_to_favoriteFragment2"
+            app:destination="@id/favoriteFragment2" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment2"
         android:name="com.example.cocktails.ui.fragment.FavoriteFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" >
-        <action
-            android:id="@+id/action_favoriteFragment2_to_detailFragment"
-            app:destination="@id/detailFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_favorite" />
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.cocktails.ui.fragment.DetailFragment"
