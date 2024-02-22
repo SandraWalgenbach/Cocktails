@@ -32,10 +32,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //Holt die Liste der Drinks aus dem ViewModel
-        val dataset = viewModel.drinks.value!!
+        //val dataset = viewModel.drinks.value!!
 
         // Initialisieren von Adapter für die RecyclerView
-        binding.RVhome.adapter = HomeAdapter(dataset)
+        //binding.RVhome.adapter = HomeAdapter(dataset)
 
 
 

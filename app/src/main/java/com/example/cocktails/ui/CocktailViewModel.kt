@@ -23,7 +23,7 @@ class CocktailViewModel(application: Application) : AndroidViewModel(application
     val loading: LiveData<ApiStatus>
         get() = _loading
 
-    val drinks = repository.drinkList
+    //val drinks = repository.drinkList
 
     init {
         loadData()
@@ -38,11 +38,11 @@ class CocktailViewModel(application: Application) : AndroidViewModel(application
                 _loading.value = ApiStatus.DONE
             } catch (e: Exception) {
                 Log.e(TAG, "Error loading Data $e")
-                if (drinks.value.isNullOrEmpty()) {
-                    _loading.value = ApiStatus.ERROR
-                } else {
-                    _loading.value = ApiStatus.DONE
-                }
+                //if (drinks.value.isNullOrEmpty()) {
+                //    _loading.value = ApiStatus.ERROR
+                //} else {
+                //    _loading.value = ApiStatus.DONE
+                //}
             }
         }
     }

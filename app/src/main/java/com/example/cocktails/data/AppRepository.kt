@@ -6,7 +6,7 @@ import com.example.cocktails.data.remote.DrinkApi
 
 class AppRepository (private val api: DrinkApi, private val database: DrinkDatabase) {
 
-    val drinkList = database.drinkDatabaseDao.getAll()
+    //val drinkList = database.drinkDatabaseDao.getAll()
 
     suspend fun getDrinksFromAPI(): List<Drink> {
         return api.retrofitService.getDrinkList().drinks
@@ -17,7 +17,7 @@ class AppRepository (private val api: DrinkApi, private val database: DrinkDatab
     //}
 
     suspend fun insertDrinksToDB(drinks: List<Drink>) {
-        database.drinkDatabaseDao.insertAll(drinks)
+        //database.drinkDatabaseDao.insertAll(drinks)
     }
 
 }

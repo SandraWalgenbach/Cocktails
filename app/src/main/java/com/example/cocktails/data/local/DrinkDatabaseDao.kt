@@ -11,11 +11,11 @@ import androidx.room.Update
 @Dao
 interface DrinkDatabaseDao {
 
-    @Insert(onConflict = OnConflictStrategy.ABORT)
-    suspend fun insertAll(drinks: List<Drink>)
+    //@Insert(onConflict = OnConflictStrategy.ABORT)
+    //suspend fun insertAll(drinks: List<Drink>)
 
-    @Query("SELECT * from Drink")
-    fun getAll(): LiveData<List<Drink>>
+    //@Query("SELECT * from drinks")
+    //fun getAll(): List<Drink>
 
     //@Update
     //suspend fun updateDrinks(drinks: List<Drink>)
