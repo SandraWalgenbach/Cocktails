@@ -12,9 +12,9 @@ class AppRepository (private val api: DrinkApi, private val database: DrinkDatab
         return api.retrofitService.getDrinkList().drinks
     }
 
-    suspend fun updateDrinks(drinks: List<Drink>) {
-        database.drinkDatabaseDao.updateDrinks(drinks)
-    }
+    //suspend fun updateDrinks(drinks: List<Drink>) {
+    //    database.drinkDatabaseDao.updateDrinks(drinks)
+    //}
 
     suspend fun insertDrinksToDB(drinks: List<Drink>) {
         database.drinkDatabaseDao.insertAll(drinks)

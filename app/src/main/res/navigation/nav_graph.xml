@@ -3,28 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment2">
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/homeFragment2"
+        android:id="@+id/homeFragment"
         android:name="com.example.cocktails.ui.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment2_to_favoriteFragment2"
-            app:destination="@id/favoriteFragment2" />
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/favoriteFragment2"
+        android:id="@+id/favoriteFragment"
         android:name="com.example.cocktails.ui.fragment.FavoriteFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" />
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.cocktails.ui.fragment.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="cocktail_position"
+            app:argType="integer" />
+    </fragment>
     <fragment
-        android:id="@+id/profilFragment2"
+        android:id="@+id/profilFragment"
         android:name="com.example.cocktails.ui.fragment.ProfilFragment"
         android:label="fragment_profil"
         tools:layout="@layout/fragment_profil" />
@@ -33,4 +41,9 @@
         android:name="com.example.cocktails.ui.fragment.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/plusFragment"
+        android:name="com.example.cocktails.ui.fragment.PlusFragment"
+        android:label="fragment_plus"
+        tools:layout="@layout/fragment_plus" />
 </navigation>

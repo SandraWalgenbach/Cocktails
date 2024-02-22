@@ -5,17 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.cocktails.databinding.FragmentSettingsBinding
+import com.example.cocktails.databinding.FragmentPlusBinding
 
-class SettingsFragment : Fragment() {
+class PlusFragment : Fragment() {
 
-    private lateinit var binding: FragmentSettingsBinding
+    private lateinit var binding: FragmentPlusBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        binding = FragmentSettingsBinding.inflate(inflater)
+        binding = FragmentPlusBinding.inflate(inflater)
         return binding.root
     }
 }

@@ -1,33 +1,51 @@
 package com.example.cocktails.ui.adapter
 
 import Drink
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
+import com.example.cocktails.R
+import com.example.cocktails.data.datamodels.DrinkList
 import com.example.cocktails.databinding.CocktailListBinding
+import com.example.cocktails.ui.fragment.HomeFragmentDirections
 
 class HomeAdapter (
     private var dataset: List<Drink>
 ) : RecyclerView.Adapter<HomeAdapter.ItemViewHolder>(){
 
+    @SuppressLint("NotifyDataSetChanged")
+    fun submitList(list: List<Drink>) {
+        dataset = list
+        notifyDataSetChanged()
+    }
+
     class ItemViewHolder(val binding: CocktailListBinding) : RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapter.ItemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding = CocktailListBinding.inflate(LayoutInflater.from(parent.context))
         return ItemViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: HomeAdapter.ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
-        //val context = holder.binding.root.context
-        val text = holder.binding.TVcocktailName
-        val image = holder.binding.IVCocktailPic
 
-        text.text = item.name
+        holder.binding.TVcocktailName.text = item.name
+        holder.binding.IVCocktailPic.load(item.picture)
 
-        image.load(item.picture)
+        //Click Listeners, Navigiert zu DetailFragment
+        holder.binding.CVCocktail.setOnClickListener {
+
+            val navController = holder.itemView.findNavController()
+            navController.navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment(position))
+        }
     }
 
     override fun getItemCount(): Int {

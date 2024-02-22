@@ -21,7 +21,7 @@ private val retrofit = Retrofit.Builder()
 
 interface DrinkApiService {
 
-    @GET("1/filter.php?a=Non_Alcoholic")
+    @GET("1/filter.php?a=Alcoholic")
     suspend fun getDrinkList(): DrinkList
 }
 

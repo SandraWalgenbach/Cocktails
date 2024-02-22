@@ -16,7 +16,6 @@
         android:layout_marginBottom="10dp"
         app:cardBackgroundColor="#40FFC0CB"
         app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,14 +44,14 @@
                 android:layout_marginBottom="10dp"
                 android:fontFamily="cursive"
                 android:letterSpacing="0.08"
-                android:text="Cocktail Name"
                 android:textColor="@color/tiffany_blue"
                 android:textSize="30sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="@+id/IV_cocktailPic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/IV_cocktailPic"
-                app:layout_constraintTop_toTopOf="@+id/IV_cocktailPic" />
+                app:layout_constraintTop_toTopOf="@+id/IV_cocktailPic"
+                tools:text="Cocktail Name"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

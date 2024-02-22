@@ -17,7 +17,7 @@ interface DrinkDatabaseDao {
     @Query("SELECT * from Drink")
     fun getAll(): LiveData<List<Drink>>
 
-    @Update
-    suspend fun updateDrinks(drinks: List<Drink>)
+    //@Update
+    //suspend fun updateDrinks(drinks: List<Drink>)
 
 }

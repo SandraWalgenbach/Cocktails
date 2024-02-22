@@ -15,5 +15,5 @@ data class Drink (
     @Json(name = "strDrinkThumb")
     val picture: String,
 
-    var clicked: Boolean = false
+    var liked: Boolean = false
 )
