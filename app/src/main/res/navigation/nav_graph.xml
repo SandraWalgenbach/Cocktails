@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.cocktails.ui.fragment.HomeFragment"
@@ -35,7 +35,11 @@
         android:id="@+id/profilFragment"
         android:name="com.example.cocktails.ui.fragment.ProfilFragment"
         android:label="fragment_profil"
-        tools:layout="@layout/fragment_profil" />
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_profilFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.cocktails.ui.fragment.SettingsFragment"
@@ -43,7 +47,17 @@
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/plusFragment"
-        android:name="com.example.cocktails.ui.fragment.PlusFragment"
+        android:name="com.example.cocktails.ui.fragment.AddFragment"
         android:label="fragment_plus"
-        tools:layout="@layout/fragment_plus" />
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.cocktails.ui.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registFragment"
+        android:name="com.example.cocktails.ui.fragment.RegistFragment"
+        android:label="fragment_regist"
+        tools:layout="@layout/fragment_regist" />
 </navigation>

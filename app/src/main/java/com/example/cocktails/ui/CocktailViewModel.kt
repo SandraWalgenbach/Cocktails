@@ -13,22 +13,31 @@ import com.example.cocktails.data.local.getDatabase
 import com.example.cocktails.data.remote.DrinkApi
 import kotlinx.coroutines.launch
 
+// Enumeration zur Verwaltung des Ladezustands der API-Aufrufe
 enum class ApiStatus { LOADING, ERROR, DONE }
 
 class CocktailViewModel(application: Application) : AndroidViewModel(application)  {
+
+    // Instanz der lokalen Datenbank
     private val database = getDatabase(application)
+
+    // Instanz des Repositorys, das die Datenbank- und API-Zugriffe behandelt
     private val repository = AppRepository(DrinkApi, database)
 
+    // Livedata für den Ladezustand der API-Aufrufe
     private val _loading = MutableLiveData<ApiStatus>()
     val loading: LiveData<ApiStatus>
         get() = _loading
 
+    // Livedata für die Drinks
     //val drinks = repository.drinkList
 
-    init {
-        loadData()
-    }
 
+    //init {
+    //    loadData()
+    //}
+
+    // Funktion zum Abrufen der Drinks
     private fun loadData() {
         viewModelScope.launch {
             _loading.value = ApiStatus.LOADING
@@ -38,15 +47,23 @@ class CocktailViewModel(application: Application) : AndroidViewModel(application
                 _loading.value = ApiStatus.DONE
             } catch (e: Exception) {
                 Log.e(TAG, "Error loading Data $e")
-                //if (drinks.value.isNullOrEmpty()) {
-                //    _loading.value = ApiStatus.ERROR
-                //} else {
-                //    _loading.value = ApiStatus.DONE
-                //}
             }
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+    //später vill
     //fun updateDrinks(drinkList: List<Drink>) {
     //    viewModelScope.launch {
     //        try {

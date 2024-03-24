@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FFFFFF"
-    tools:context=".ui.fragment.DetailFragment">
+    tools:context=".ui.fragment.LoginFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -19,83 +18,101 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/IVdetailPic"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
-
             <TextView
-                android:id="@+id/TVdetailName"
+                android:id="@+id/TVlogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="10dp"
                 android:fontFamily="cursive"
                 android:letterSpacing="0.08"
-                android:text="Cocktail Name"
+                android:text="Login"
                 android:textColor="@color/tiffany_blue"
                 android:textSize="30sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IVdetailPic" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/TVanleitung"
+            <EditText
+                android:id="@+id/ETTemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:ems="10"
+                android:fontFamily="cursive"
+                android:hint="E-Mail"
+                android:inputType="text"
+                android:letterSpacing="0.08"
+                android:textColor="@color/tiffany_blue"
+                android:textColorHint="@color/tiffany_blue"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TVlogin" />
+
+            <EditText
+                android:id="@+id/ETTpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:fontFamily="cursive"
+                android:hint="Password"
+                android:inputType="text"
+                android:letterSpacing="0.08"
+                android:textColor="@color/tiffany_blue"
+                android:textColorHint="@color/tiffany_blue"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ETTemail" />
+
+            <Button
+                android:id="@+id/BTNlogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/rosa"
                 android:fontFamily="cursive"
                 android:letterSpacing="0.08"
-                android:text="Anleitung"
+                android:text="Login"
                 android:textColor="@color/tiffany_blue"
                 android:textSize="20sp"
-                android:textStyle="italic"
+                android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TVzutaten" />
+                app:layout_constraintTop_toBottomOf="@+id/ETTpassword" />
 
-            <TextView
-                android:id="@+id/TVzutaten"
+            <Button
+                android:id="@+id/BTNregist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/rosa"
                 android:fontFamily="cursive"
                 android:letterSpacing="0.08"
-                android:text="Zutaten"
+                android:text="Zum Registrieren"
                 android:textColor="@color/tiffany_blue"
                 android:textSize="20sp"
-                android:textStyle="italic"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TVdetailName" />
-
-            <ImageButton
-                android:id="@+id/IBdetailFavorite"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="#00FFFFFF"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="@+id/BTNlogin"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icon_favorite" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintTop_toTopOf="@+id/BTNlogin"
+                app:layout_constraintVertical_bias="0.0" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

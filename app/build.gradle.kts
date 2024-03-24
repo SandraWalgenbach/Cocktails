@@ -1,8 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("androidx.navigation.safeargs")
+    id("androidx.navigation.safeargs.kotlin")
     id("com.google.devtools.ksp")
+    id("com.google.gms.google-services")
 
 }
 
@@ -70,4 +71,8 @@ dependencies {
     implementation ("androidx.room:room-ktx:2.6.1")
     ksp ("androidx.room:room-compiler:2.6.1")
 
+    //firebase/firestore
+    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation("com.google.firebase:firebase-firestore:24.10.1")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
 }

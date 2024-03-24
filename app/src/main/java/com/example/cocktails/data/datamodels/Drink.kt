@@ -2,6 +2,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
+//mit luc von Drink zu drinks geändert
 @Entity(tableName = "drinks")
 data class Drink (
 

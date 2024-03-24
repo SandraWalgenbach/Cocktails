@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.ProfilFragment">
+    tools:context=".ui.fragment.AddFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/IVprofilPic"
+                android:id="@+id/IVaddPic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -34,31 +34,56 @@
                 tools:src="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/TVprofilName"
+                android:id="@+id/TVaddName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
                 android:fontFamily="cursive"
                 android:letterSpacing="0.08"
-                android:text="Profil Name"
+                android:text="Name"
                 android:textColor="@color/tiffany_blue"
                 android:textSize="30sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IVprofilPic" />
+                app:layout_constraintTop_toBottomOf="@+id/IVaddPic" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/RVprofil"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            <TextView
+                android:id="@+id/TVanleitungAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="cursive"
+                android:letterSpacing="0.08"
+                android:text="Anleitung"
+                android:textColor="@color/tiffany_blue"
+                android:textSize="20sp"
+                android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TVprofilName"
-                tools:listitem="@layout/profil_list"/>
+                app:layout_constraintTop_toBottomOf="@+id/TVzutatenAdd" />
+
+            <TextView
+                android:id="@+id/TVzutatenAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="cursive"
+                android:letterSpacing="0.08"
+                android:text="Zutaten"
+                android:textColor="@color/tiffany_blue"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TVaddName" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

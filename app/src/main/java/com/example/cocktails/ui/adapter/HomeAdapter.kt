@@ -37,11 +37,11 @@ class HomeAdapter (
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
 
-        holder.binding.TVcocktailName.text = item.name
-        holder.binding.IVCocktailPic.load(item.picture)
+        //holder.binding.TVcocktailName.text = item.name
+        //holder.binding.IVCocktailPic.load(item.picture)
 
-        //Click Listeners, Navigiert zu DetailFragment
-        holder.binding.CVCocktail.setOnClickListener {
+        //Click Listeners, Navigiert zu DetailFragment durch klick auf die card
+        holder.binding.CVcocktail.setOnClickListener {
 
             val navController = holder.itemView.findNavController()
             navController.navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment(position))

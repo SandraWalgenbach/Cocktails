@@ -9,7 +9,7 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/TV_cocktails"
+        android:id="@+id/TVcocktails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/CV_bottomNav"
+        android:id="@+id/CVbottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="#00FFFFFF"
@@ -34,10 +34,10 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/BNV_bottomNav"
+            android:id="@+id/BNVbottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#40FF10F0"
+            android:background="#40FFC0CB"
             app:itemIconSize="30dp"
             app:itemIconTint="@color/tiffany_blue"
             app:itemRippleColor="#80723298"
@@ -50,11 +50,11 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/CV_bottomNav"
+        app:layout_constraintBottom_toTopOf="@+id/CVbottomNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TV_cocktails"
+        app:layout_constraintTop_toBottomOf="@+id/TVcocktails"
         app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/nav_graph" />
 
